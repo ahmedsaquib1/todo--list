@@ -1,0 +1,61 @@
+@import 'bootstrap/dist/css/bootstrap.css';
+.container{
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: rgb(223, 223, 217);
+    border: solid gray;
+    border-radius: 6px;
+}
+.todo-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    text-decoration: none;
+}
+.todo-form input{
+    width: 100%;
+    margin-top: 8px;
+}
+.todo-form button{
+    margin-top: 8px;
+}
+.todo-list >li{
+    margin-top: 5px;
+    text-decoration: none;
+}
+.todo-list >li >div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.todo-list button{
+    margin-left: 5px;
+    
+}
+.comp{
+    color: rgb(26, 111, 168);
+    font-size: larger;
+    margin-left: 70px;
+    font-size: 200%;
+}
+.comp1{
+    color: rgb(37, 141, 11);
+    font-size: 150%;
+
+}
+.list{
+    font-size: 130%;
+    color: darkorange;
+}
+.head{
+    margin-left: 90px;
+}
+.butt{
+    margin-bottom: 5px;
+}
+#forms{
+margin-top: 5px;
+}
