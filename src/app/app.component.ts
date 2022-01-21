@@ -18,7 +18,10 @@ export class AppComponent {
 
   onSubmit(form: NgForm){
     let todo= new Todo(Guid.create(),form.value.title, false);
-    this.todos.push(todo);
+    if(form?.value?.title?.length){
+      this.todos.push(todo);
+    }
+   
     form.resetForm();
   }
   onComplete(id:Guid){
