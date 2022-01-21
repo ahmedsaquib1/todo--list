@@ -1,0 +1,46 @@
+<!-- Highlight Card -->
+
+
+<div class="container">
+  <form id="forms" class="todo-form" #f="ngForm" (ngSubmit)= "onSubmit(f)">
+    <input type="text" id="title" name="title" ngModel/>
+
+    <div>
+      <button type="submit" class="btn btn-info">
+        <i class="material-icons">add</i>
+      </button>
+    </div>
+  </form>
+  <h1 class="head"> My - Todo - List</h1>
+  <ul  class="todo-list" type="none" >
+    <li *ngFor="let todo of todos">
+      <div *ngIf="!this.todo.isComplete">
+        <div class="list">{{ this.todo.title }}</div>
+        <div>
+          <button (click)="onComplete(this.todo.id)"  class="btn btn-success" ><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <i class="material-icons">check</i>
+          </button>
+          <button (click)="onDelete(this.todo.id)" class="btn btn-danger">
+            <i class="material-icons">delete</i>
+          </button>
+        </div>
+      </div>
+    </li>
+
+    <br>
+    <br>
+    <h1 class="comp">Completed List</h1>
+    <br>
+    <li *ngFor="let todo of todos">
+      <div *ngIf="this.todo.isComplete">
+        <div class="comp1">{{ this.todo.title }}</div>
+        <div class="butt">
+         
+          <button (click)="onDelete(this.todo.id)" class="btn btn-danger">
+            <i class="material-icons">delete</i>
+          </button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
